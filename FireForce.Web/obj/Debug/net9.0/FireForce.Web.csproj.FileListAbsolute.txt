@@ -48,6 +48,7 @@ C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\FireFor
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\FireForce.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\FireForce.Web.RazorAssemblyInfo.cache
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\FireForce.Web.RazorAssemblyInfo.cs
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\FireForce.Web.sourcelink.json
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
@@ -122,6 +123,7 @@ C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\staticw
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\FireForc.ED8F8E7A.Up2Date
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\FireForce.Web.dll
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\refint\FireForce.Web.dll

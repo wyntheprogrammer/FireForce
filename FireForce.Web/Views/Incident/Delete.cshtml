@@ -1,0 +1,39 @@
+﻿@model FireForce.Application.DTOs.IncidentDTO
+@{
+   ViewData["Title"] = "Delete Incident";
+}
+
+<h1 class="text-danger"><i class="fas fa-exclamation-triangle"></i> Delete Incident</h1>
+
+<div class="alert alert-danger">
+    <h5>Are you sure you want to delete this incident?</h5>
+</div>
+
+
+<div class="card shadow border-danger">
+    <div class="card-header bg-danger text-white">
+        <h5 class="mb-0">Station Information</h5>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-4">Incident Number:</dt>
+            <dd class="col-sm-8">@Model.IncidentNumber</dd>
+            <dt class="col-sm-4">Indident Type:</dt>
+            <dd class="col-sm-8">@Model.IncidentType</dd>
+            <dt class="col-sm-4">Description:</dt>
+            <dd class="col-sm-8">@Model.Description</dd>
+        </dl>
+
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="d-flex justify-content-between mt-4">
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> No, Go Back
+                </a>
+                <button type="submit" class="btn btn-danger">
+                    <i class="fas fa-trash"></i> Yes, Delete Incident
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

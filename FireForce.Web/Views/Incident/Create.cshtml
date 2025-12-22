@@ -1,0 +1,124 @@
+﻿@model FireForce.Application.DTOs.IncidentDTO
+@{
+    ViewData["Title"] = "Report Incident";
+}
+
+<h1><i class="fas fa-plus"></i> Report New Incident</h1>
+
+<div class="row">
+    <div class="col-md-10">
+        <div class="card shadow">
+            <div class="card-body">
+                <form asp-action="Create" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="IncidentNumber" class="form-label"></label>
+                            <input asp-for="IncidentNumber" class="form-control" placeholder="INC-001"/>
+                            <span asp-validation-for="IncidentNumber" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="IncidentType" class="form-label"></label>
+                            <select asp-for="IncidentType" class="form-select">
+                                <option value="">-- Select Type --</option>
+                                <option value="Fire">Fire</option>
+                                <option value="Medical">Medical</option>
+                                <option value="Rescue">Rescue</option>
+                                <option value="Hazmat">Hazmat</option>
+                                <option value="Vehicle Accident">Vehicle Accident</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span asp-validation-for="IncidentType" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="IncidentDate" class="form-label"></label>
+                            <input asp-for="IncidentDate" type="datetime-local" class="form-control" />
+                            <span asp-validation-for="IncidentDate" class="text-danger"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Location" class="form-label"></label>
+                        <input asp-for="Location" class="form-control" placeholder="Full address or landmark" />
+                        <span asp-validation-for="Location" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Description" class="form-label"></label>
+                        <textarea asp-for="Description" class="form-control" rows="4" placeholder="Detailed description of the incident"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="Severity" class="form-label"></label>
+                            <select asp-for="Severity" class="form-select">
+                                <option value="">-- Select Severity --</option>
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                                <option value="Critical">Critical</option>
+                            </select>
+                            <span asp-validation-for="Severity" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="Status" class="form-label"></label>
+                            <select asp-for="Status" class="form-select">
+                                <option value="">-- Select Status --</option>
+                                <option value="Reported">Reported</option>
+                                <option value="InProgress">In Progress</option>
+                                <option value="Resolved">Resolved</option>
+                                <option value="Closed">Closed</option>
+                            </select>
+                            <span asp-validation-for="Status" class="text-danger"></span>
+                        </div>
+
+                        <div class="cold-md-4 mb-3">
+                            <label asp-for="StationId" class="form-select"></label>
+                            <select asp-for="StationId" class="form-select">
+                                <opiton value="">-- Select Station --</opiton>
+                                @foreach (var station in ViewBag.Stations as IEnumerable<FireForce.Application.DTOs.StationDTO>)
+                                {
+                                    <option value="@station.Id">@station.Name (@station.StationNumber)</option>
+                                }
+                            </select>
+                            <span asp-validation-for="StationId" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="ResponseTime" class="form-label">Response Time (Optional)</label>
+                            <input asp-for="ResponseTime" type="datetime-local" class="form-control"/>
+                            <span asp-validation-for="ResponseTime" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="ResolvedTime" class="form-label">Resolved Time (Optional)</label>
+                            <input asp-for="ResolvedTime" type="datetime-local" class="form-control" />
+                            <span asp-validation-for="ResponseTime" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </a>
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fas fa-save"></i> Report Incident
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"/>
+}

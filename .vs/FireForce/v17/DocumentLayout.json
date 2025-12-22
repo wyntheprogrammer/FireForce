@@ -1,0 +1,281 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\equipment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\equipment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\incident\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\incident\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\incident\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\incident\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\station\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\station\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\incident\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\incident\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\incident\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\incident\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\station\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\station\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\station\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\station\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\incident\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\incident\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\station\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\station\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\fireforce.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\fireforce.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:388378711:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Equipment\\Index.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Equipment\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Equipment\\Index.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Equipment\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-22T08:24:21.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Delete.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Incident\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Delete.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Incident\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-22T08:20:04.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Edit.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Incident\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Edit.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Incident\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-22T08:06:38.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Create.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Incident\\Create.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Create.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Incident\\Create.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAwHsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-22T07:23:42.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Details.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Station\\Details.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Details.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Station\\Details.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAADEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-22T05:55:14.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Edit.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Station\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Edit.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Station\\Edit.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAApwFQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-22T05:52:53.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Index.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Incident\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Index.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Incident\\Index.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwFUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-22T06:22:27.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Create.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Station\\Create.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Create.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Station\\Create.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADQAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-22T05:30:44.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Program.cs",
+              "RelativeDocumentMoniker": "FireForce.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Program.cs",
+              "RelativeToolTip": "FireForce.Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T00:53:52.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FireForce.Web",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\FireForce.Web.csproj",
+              "RelativeDocumentMoniker": "FireForce.Web\\FireForce.Web.csproj",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\FireForce.Web.csproj",
+              "RelativeToolTip": "FireForce.Web\\FireForce.Web.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-22T00:51:56.932Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "d7577469-fffc-491b-a4b8-e42059e6f505",
+        "Display": 0,
+        "X": 703,
+        "Y": 51,
+        "Width": 668,
+        "Height": 472,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Delete.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Station\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Delete.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Station\\Delete.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAYwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-22T06:11:50.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Details.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Incident\\Details.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Details.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Incident\\Details.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-22T08:11:04.88Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+﻿@model FireForce.Application.DTOs.IncidentDTO
+@{
+    ViewData["Title"] = "Incident Details";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1><i class="fas fa-building"></i> Incident Details</h1>
+    <div>
+        @if (User.IsInRole("Admin") || User.IsInRole("Captain"))
+        {
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
+                <i class="fas fa-edit"></i> Edit
+            </a>
+        }
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+    </div>
+</div>
+
+<div class="card shadow">
+    <div class="card-header bg-success text-white">
+        <h5 class="mb-0">Station Information</h5>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Incident Number:</dt>
+            <dd class="col-sm-9"><span class="badge bg-success fs-6">@Model.IncidentNumber</span></dd>
+
+            <dt class="col-sm-3">Incident Type:</dt>
+            <dd class="col-sm-9">@Model.IncidentType</dd>
+
+            <dt class="col-sm-3">Incident Date:</dt>
+            <dd class="col-sm-9"><i class="fas fa-map-marker-alt"></i>@Model.IncidentDate</dd>
+
+            <dt class="col-sm-3">Location:</dt>
+            <dd class="col-sm-9"><i class="fas fa-phone"></i>@Model.Location</dd>
+
+            <dt class="col-sm-3">Description:</dt>
+            <dd class="col-sm-9"><i class="fas fa-users"></i>@Model.Description</dd>
+
+            <dt class="col-sm-3">Severity:</dt>
+            <dd class="col-sm-9"><i class="fas fa-users"></i>@Model.Severity</dd>
+
+            <dt class="col-sm-3">Station Name:</dt>
+            <dd class="col-sm-9"><i class="fas fa-users"></i>@Model.StationName</dd>
+
+            <dt class="col-sm-3">Response Time:</dt>
+            <dd class="col-sm-9"><i class="fas fa-users"></i>@Model.ResponseTime</dd>
+       
+            <dt class="col-sm-3">Resolved Time:</dt>
+            <dd class="col-sm-9"><i class="fas fa-users"></i>@Model.ResolvedTime</dd>
+        </dl>
+    </div>
+</div>

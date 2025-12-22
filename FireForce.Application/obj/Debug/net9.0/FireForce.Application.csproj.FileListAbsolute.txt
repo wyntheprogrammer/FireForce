@@ -1,8 +1,3 @@
-C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\obj\Debug\net9.0\FireForce.Application.csproj.AssemblyReference.cache
-C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\obj\Debug\net9.0\FireForce.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\obj\Debug\net9.0\FireForce.Application.AssemblyInfoInputs.cache
-C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\obj\Debug\net9.0\FireForce.Application.AssemblyInfo.cs
-C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\obj\Debug\net9.0\FireForce.Application.csproj.CoreCompileInputs.cache
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\bin\Debug\net9.0\FireForce.Application.deps.json
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\bin\Debug\net9.0\FireForce.Application.dll
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\bin\Debug\net9.0\FireForce.Application.pdb
@@ -10,6 +5,12 @@ C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\bin\Debug\net9.0
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\bin\Debug\net9.0\FireForce.Infrastructure.dll
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\bin\Debug\net9.0\FireForce.Domain.pdb
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\bin\Debug\net9.0\FireForce.Infrastructure.pdb
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\obj\Debug\net9.0\FireForce.Application.csproj.AssemblyReference.cache
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\obj\Debug\net9.0\FireForce.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\obj\Debug\net9.0\FireForce.Application.AssemblyInfoInputs.cache
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\obj\Debug\net9.0\FireForce.Application.AssemblyInfo.cs
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\obj\Debug\net9.0\FireForce.Application.csproj.CoreCompileInputs.cache
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\obj\Debug\net9.0\FireForce.Application.sourcelink.json
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\obj\Debug\net9.0\FireForc.FD351794.Up2Date
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\obj\Debug\net9.0\FireForce.Application.dll
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Application\obj\Debug\net9.0\refint\FireForce.Application.dll

@@ -8,6 +8,7 @@ C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\FireForce.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\FireForce.Infrastructure.AssemblyInfo.cs
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\FireForce.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\FireForce.Infrastructure.sourcelink.json
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\FireForc.4B74C4B9.Up2Date
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\FireForce.Infrastructure.dll
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\refint\FireForce.Infrastructure.dll

@@ -1,0 +1,86 @@
+﻿@model IEnumerable<FireForce.Application.DTOs.FirefighterDTO>
+@*
+    ViewData["Title"] = "Firefighter";
+*@
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1><i ="fas fa-user-shield"></i> Firefighters</h1>
+    @if (User.IsInRole("Admin") || User.IsInRole("Captain"))
+    {
+        <a asp-action="Create" class="btn btn-danger">
+            <i class="fas fa-plus"></i> Add Firefighter
+        </a>
+    }
+</div>
+
+
+<div class="card shadow">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover" id="firefighterTable">
+                <thead class="table-light">
+                    <tr>
+                        <th>Badge Number</th>
+                        <th>Name</th>
+                        <th>Rank</th>
+                        <th>Phone</th>
+                        <th>Station</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var firefighter in Model)
+                    {
+                        <tr>
+                            <td>@firefighter.BadgeNumber</td>
+                            <td>@firefighter.FullName</td>
+                            <td>@firefighter.Rank</td>
+                            <td>@firefighter.PhoneNumber</td>
+                            <td>@(firefighter.StationName ?? "Unassigned")</td>
+                            <td>
+                                <span class="badge bg-@(firefighter.Status == "Active" ? "success" : "secondary")">
+                                    @firefighter.Status
+                                </span>
+                            </td>
+                            <td>
+                                <div class="btn-group btn-group-sm">
+                                    <a asp-action="Details" asp-route-id="@firefighter.Id" class="btn btn-info" titla="Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    @if (User.IsInRole("Admin") || User.IsInRole("Captain"))
+                                    {
+                                        <a asp-action="Edit" asp-route-id="@firefighter.Id" class="btn btn-warning" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                    }
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <a asp-action="Delete" asp-rooute-id="@firefighter.Id" class="btn btn-danger" title="Delete">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
+    <script>
+        $(document).ready(function () {
+            $('#firefighterTable').DataTable({
+                "pageLength": 10,
+                "ordering": true,
+                "searching": true
+            });
+        });
+    </script>
+}

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<FireForce.Application.DTOs.EquipmentDTO>
+@{
+    ViewData["Title"] = "Equipment";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1><i class="fas fa-tools"></i> Equipment</h1>
+    @if (User.IsInRole("Admin") || User.IsInRole("Captain"))
+    {
+        <a asp-action="Create" class="btn btn-danger">
+            <i class="fas fa-plus"></i> Add Equipment
+        </a>
+    }
+</div>
+
+<div class="card shadow">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover" id="equipmentTable">
+                <thead class="table-light">
+                    <tr>
+                        <th>Equipment #</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Manufacturer</th>
+                        <th>Station</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var equipment in Model)
+                    {
+                        <tr>
+                            <td><strong>@equipment.EquipmentNumber</strong></td>
+                            <td>@equipment.Name</td>
+                            <td><span class="badge bg-secondary">@equipment.Type</span></td>
+                            <td>@equipment.Manufacturer</td>
+                            <td>@(equipment.StationName ?? "Unassigned")</td>
+                            <td>
+                                <span class="badge bg-@(equipment.Status == "Available" ? "success" : equipment.Status == "InUse" ? "primary" : equipment.Status == "Maintenance" ? "warning" : "secondary")">
+                                    @equipment.Status
+                                </span>
+                            </td>
+                            <td>
+                                <div class="btn-group btn-group-sm">
+                                    <a asp-action="Details" asp-route-id="@equipment.Id" class="btn btn-info">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    @if (User.IsInRole("Admin") || User.IsInRole("Captain"))
+                                    {
+                                        <a asp-action="Edit" asp-route-id="@equipment.Id" class="btn btn-warning">
+                                            <i class="fas fade edit"></i>
+                                        </a>
+                                    }
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <a asp-action="Delete" asp-route-id="@equipment.Id" class="btn btn-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
+    <script>
+        $(document).ready(function () {
+            $('#equipmentTable').DataTable({
+                "pageLength": 10
+            });
+        });
+    </script>
+}

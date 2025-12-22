@@ -1,0 +1,121 @@
+﻿@model FireForce.Application.DTOs.FirefighterDTO
+@{
+    ViewData["Title"] = "FireFighter Details";
+}
+
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1><i class="fas fa-user-shield"></i> Firefighter Details</h1>
+    <div>
+        @if (User.IsInRole("Admin") || User.IsInRole("Captain"))
+        {
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
+                <i class="fas fa-edit"></i>Edit
+            </a>
+        }
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Personal Information</h5>
+            </div>
+            <div card-body>
+                <dl class="row">
+
+                    <dt class="col-sm-4">Badge Number:</dt>
+                    <dd class="col-sm-8">
+                        <span class="badge bg-primary fs-6">@Model.BadgeNumber</span>
+                    </dd>
+                    
+                    <dt class="col-sm-4">Full Name:</dt>
+                    <dd class="col-sm-8">@Model.FullName</dd>
+
+                    <dt class="col-sm-4">Rank:</dt>
+                    <dd class="col-sm-8">
+                        <span class="badge bg-success">@Model.Rank</span>
+                    </dd>
+
+                    <dt class="col-sm-4">Date of Birth:</dt>
+                    <dd class="col-sm-8">@Model.DateOfBirth.ToString("MMMM dd, yyyy")</dd>
+
+                    <dt class="col-sm-4">Hire Date:</dt>
+                    <dd class="col-sm-8">@Model.HireDate.ToString("MMMM dd, yyyy")</dd>
+
+                    <dt class="col-sm-4">Phone Number:</dt>
+                    <dd class="col-sm-8">
+                        <i class="fas fa-phone">@Model.PhoneNumber</i>
+                    </dd>
+
+                    <dt class="col-sm-4">Address:</dt>
+                    <dd class="col-sm-8">
+                        <i class="fas fa-map-marker-alt">@Model.Address</i>
+                    </dd>
+
+                    <dt class="col-sm-4">Status:</dt>
+                    <dd class="col-sm-8">
+                        <span class="badge bg-@(Model.Status == "Active" ? "success" : Model.Status == "OnLeave" ? "warning" : "secondary") fs-6">
+                            @Model.Status
+                        </span>
+                    </dd>
+
+                    <dt class="col-sm-4">Assigned Station:</dt>
+                    <dd class="cols-sm-8">
+                        @if(!string.IsNullOrEmpty(Model.StationName))
+                        {
+                            <i class="fas fa-building"></i> @Model.StationName
+                            <a asp-controller="Station" asp-action="Details" asp-route-id="Model.StationId" class="btn btn-sm btn-outline-primary ms-2">
+                                <i class="fas fa-eye"></i> View Station
+                            </a>
+                        }
+                        else
+                        {
+                            <span class="text-muted">Not assigned to any station</span>
+                        }
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4">
+
+        <div class="card shadow mb-3">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">Quick Stats</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <small class="text-muted">Years of Service</small>
+                    <h4>@((DateTime.Now - Model.HireDate).Days / 365) years</h4>
+                </div>
+                <div class="mb-3">
+                    <small class="text-muted">Years of Service</small>
+                    <h4>@((DateTime.Now - Model.DateOfBirth).Days / 365) years</h4>
+                </div>
+            </div>
+        </div>
+
+        @if (User.IsInRole("Admin"))
+        {
+            <div class="card shadow border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h6 class="mb-0">Danger Zone</h6>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted small">Deleteing this firefighter will remove all associated records.</p>
+                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger btn-sm w-100">
+                        <i class="fas fa-trash"></i> Delete Firefighter
+                    </a>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

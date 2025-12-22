@@ -5,6 +5,7 @@ C:\Users\jpbacolod\source\repos\FireForce\FireForce.Domain\obj\Debug\net9.0\Fire
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Domain\obj\Debug\net9.0\FireForce.Domain.AssemblyInfoInputs.cache
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Domain\obj\Debug\net9.0\FireForce.Domain.AssemblyInfo.cs
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Domain\obj\Debug\net9.0\FireForce.Domain.csproj.CoreCompileInputs.cache
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Domain\obj\Debug\net9.0\FireForce.Domain.sourcelink.json
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Domain\obj\Debug\net9.0\FireForce.Domain.dll
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Domain\obj\Debug\net9.0\refint\FireForce.Domain.dll
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Domain\obj\Debug\net9.0\FireForce.Domain.pdb
