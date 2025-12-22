@@ -1,0 +1,15 @@
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\bin\Debug\net9.0\FireForce.Infrastructure.deps.json
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\bin\Debug\net9.0\FireForce.Infrastructure.dll
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\bin\Debug\net9.0\FireForce.Infrastructure.pdb
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\bin\Debug\net9.0\FireForce.Domain.dll
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\bin\Debug\net9.0\FireForce.Domain.pdb
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\FireForce.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\FireForce.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\FireForce.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\FireForce.Infrastructure.AssemblyInfo.cs
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\FireForce.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\FireForc.4B74C4B9.Up2Date
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\FireForce.Infrastructure.dll
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\refint\FireForce.Infrastructure.dll
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\FireForce.Infrastructure.pdb
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Infrastructure\obj\Debug\net9.0\ref\FireForce.Infrastructure.dll
