@@ -1,0 +1,128 @@
+﻿@model IEnumerable<FireForce.Application.DTOs.AuditLogDTO>
+@{
+    ViewData["Title"] = "Audit Logs";
+}
+
+<h1><i class="bi bi-history"></i> Audit Logs</h1>
+
+<div class="card shadow mb-3">
+    <div class="card-body">
+        <form method="get" class="row g-3">
+            <div class="col-md-4">
+                <label class="form-label">Filter by Table</label>
+                <select name="tableName" class="form-select">
+                    <option value="">All Tables</option>
+                    <option value="Users">Users</option>
+                    <option value="Firefighters">Firefighters</option>
+                    <option value="Stations">Stations</option>
+                    <option value="Incidents">Incidents</option>
+                    <option value="Equipment">Equipment</option>
+                </select>
+            </div>
+            <div class="col-md-4 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-filter"></i> Filter
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="card shadow">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover table-sm" id="auditTable">
+                <thead class="table-light">
+                    <tr>
+                        <th>Date/Time</th>
+                        <th>Table</th>
+                        <th>Action</th>
+                        <th>Record ID</th>
+                        <th>Changed By</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var log in Model)
+                    {
+                        <tr>
+                            <td>@log.ChangedAt.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                            <td><span class="badge bg-secondary">@log.TableName</span></td>
+                            <td>
+                                <span class="badge bg-@(log.Action == "INSERT" ? "success" : log.Action == "UPDATE" ? "warning" : "danger")">
+                                    @log.Action
+                                </span>
+                            </td>
+                            <td>@log.RecordId</td>
+                            <td>@log.ChangedBy</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#detailsModal@(log.Id)">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <div class="modal fade" id="detailsModal@(log.Id)" tableindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Audit Log Details</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <dl class="row">
+                                            <dt class="col-sm-3">Table:</dt>
+                                            <dd class="col-sm-9">@log.TableName</dd>
+
+                                            <dt class="col-sm-3">Action:</dt>
+                                            <dd class="col-sm-9">@log.Action</dd>
+
+                                            <dt class="col-sm-3">Record ID:</dt>
+                                            <dd class="col-sm-9">@log.RecordId</dd>
+
+                                            <dt class="col-sm-3">Changed By:</dt>
+                                            <dd class="col-sm-9">@log.ChangedBy</dd>
+
+                                            <dt class="col-sm-3">Date/Time:</dt>
+                                            <dd class="col-sm-9">@log.ChangedAt.ToString("yyyy-MM-dd HH:mm:ss")</dd>
+
+                                            @if (!string.IsNullOrEmpty(log.OldValue))
+                                            {
+                                                <dt class="col-sm-3">Old Value:</dt>
+                                                <dd class="col-sm-9"><pre class="bg-light p-2">@log.OldValue</pre></dd>
+                                            }
+
+                                            @if (!string.IsNullOrEmpty(log.NewValue))
+                                            {
+                                                <dt class="col-sm-3">New Value:</dt>
+                                                <dd class="col-sm-9"><pre class="bg-light p-2">@log.NewValue</pre></dd>
+                                            }
+                                        </dl>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
+    <script>
+        $(document).ready(function () {
+            $('#auditTable').DataTable({
+                "order": [[0, "desc"]],
+                "pageLength": 25
+            });
+        });
+    </script>
+}

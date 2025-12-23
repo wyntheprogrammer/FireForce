@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "nvJh6NlXAlk=",
+  "dgSpecHash": "VK5zZm30uUM=",
   "success": true,
   "projectFilePath": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Application\\FireForce.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jpbacolod\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
-    "C:\\Users\\jpbacolod\\.nuget\\packages\\dapper\\2.1.28\\dapper.2.1.28.nupkg.sha512",
+    "C:\\Users\\jpbacolod\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\jpbacolod\\.nuget\\packages\\microsoft.data.sqlite\\8.0.0\\microsoft.data.sqlite.8.0.0.nupkg.sha512",
     "C:\\Users\\jpbacolod\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.0\\microsoft.data.sqlite.core.8.0.0.nupkg.sha512",
     "C:\\Users\\jpbacolod\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",

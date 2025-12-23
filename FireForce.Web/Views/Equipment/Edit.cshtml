@@ -1,0 +1,116 @@
+﻿<!-- Views/Equipment/Edit.cshtml -->
+@model FireForce.Application.DTOs.EquipmentDTO
+@{
+    ViewData["Title"] = "Edit Equipment";
+}
+
+<h1><i class="bi bi-edit"></i> Edit Equipment</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-body">
+                <form asp-action="Edit" method="post">
+                    <input type="hidden" asp-for="Id" />
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="EquipmentNumber" class="form-label"></label>
+                            <input asp-for="EquipmentNumber" class="form-control" />
+                            <span asp-validation-for="EquipmentNumber" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Name" class="form-label"></label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Type" class="form-label"></label>
+                            <select asp-for="Type" class="form-select">
+                                <option value="">-- Select Type --</option>
+                                <option value="Truck">Fire Truck</option>
+                                <option value="Hose">Hose</option>
+                                <option value="Ladder">Ladder</option>
+                                <option value="Protective Gear">Protective Gear</option>
+                                <option value="Breathing Apparatus">Breathing Apparatus</option>
+                                <option value="Communication Device">Communication Device</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span asp-validation-for="Type" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Manufacturer" class="form-label"></label>
+                            <input asp-for="Manufacturer" class="form-control" />
+                            <span asp-validation-for="Manufacturer" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="PurchaseDate" class="form-label"></label>
+                            <input asp-for="PurchaseDate" type="date" class="form-control" />
+                            <span asp-validation-for="PurchaseDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="LastMaintenanceDate" class="form-label">Last Maintenance</label>
+                            <input asp-for="LastMaintenanceDate" type="date" class="form-control" />
+                            <span asp-validation-for="LastMaintenanceDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="NextMaintenanceDate" class="form-label">Next Maintenance</label>
+                            <input asp-for="NextMaintenanceDate" type="date" class="form-control" />
+                            <span asp-validation-for="NextMaintenanceDate" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Status" class="form-label"></label>
+                            <select asp-for="Status" class="form-select">
+                                <option value="">-- Select Status --</option>
+                                <option value="Available">Available</option>
+                                <option value="InUse">In Use</option>
+                                <option value="Maintenance">Maintenance</option>
+                                <option value="Decommissioned">Decommissioned</option>
+                            </select>
+                            <span asp-validation-for="Status" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="StationId" class="form-label">Assigned Station</label>
+                            <select asp-for="StationId" class="form-select">
+                                <option value="">-- Select Station --</option>
+                                @foreach (var station in ViewBag.Stations as IEnumerable<FireForce.Application.DTOs.StationDTO>)
+                                {
+                                    <option value="@station.Id">@station.Name</option>
+                                }
+                            </select>
+                            <span asp-validation-for="StationId" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Back
+                        </a>
+                        <button type="submit" class="btn btn-warning">
+                            <i class="bi bi-save"></i> Update
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

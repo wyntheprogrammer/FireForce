@@ -1,0 +1,139 @@
+﻿@model FireForce.Application.DTOs.EquipmentDTO
+@{
+    ViewData["Title"] = "Equipment Details";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1><i class="bi bi-tools"></i> Equipment Details</h1>
+    <div>
+        @if (User.IsInRole("Admin") || User.IsInRole("Captain"))
+        {
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
+                <i class="bi bi-edit"></i> Edit
+            </a>
+        }
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Back
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">Equipment Information</h5>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-4">Equipment Number:</dt>
+                    <dd class="col-sm-8"><span class="badge bg-info fs-6">@Model.EquipmentNumber</span></dd>
+
+                    <dt class="col-sm-4">Name:</dt>
+                    <dd class="col-sm-8">@Model.Name</dd>
+
+                    <dt class="col-sm-4">Type:</dt>
+                    <dd class="col-sm-8"><span class="badge bg-secondary">@Model.Type</span></dd>
+
+                    <dt class="col-sm-4">Manufacturer:</dt>
+                    <dd class="col-sm-8">@Model.Manufacturer</dd>
+
+                    <dt class="col-sm-4">Purchase Date:</dt>
+                    <dd class="col-sm-8">@Model.PurchaseDate.ToString("MMMM dd, yyyy")</dd>
+
+                    <dt class="col-sm-4">Status:</dt>
+                    <dd class="col-sm-8">
+                        <span class="badge bg-@(Model.Status == "Available" ? "success" : Model.Status == "InUse" ? "primary" : Model.Status == "Maintenance" ? "warning" : "secondary") fs-6">
+                            @Model.Status
+                        </span>
+                    </dd>
+
+                    <dt class="col-sm-4">Assigned Station:</dt>
+                    <dd class="col-sm-8">
+                        @if (!string.IsNullOrEmpty(Model.StationName))
+                        {
+                            <i class="bi bi-building"></i> 
+                            @Model.StationName
+                            <a asp-controller="Station" asp-action="Details" asp-route-id="@Model.StationId" class="btn btn-sm btn-outline-primary ms-2">
+                                <i class="bi bi-eye"></i> View Station
+                            </a>
+                        }
+                        else
+                        {
+                            <span class="text-muted">Not assigned</span>
+                        }
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        @if (Model.LastMaintenanceDate.HasValue || Model.NextMaintenanceDate.HasValue)
+        {
+            <div class="card shadow mt-3">
+                <div class="card-header bg-warning text-white">
+                    <h5 class="mb-0"><i class="bi bi-wrench"></i> Maintenance Schedule</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row mb-0">
+                        @if (Model.LastMaintenanceDate.HasValue)
+                        {
+                            <dt class="col-sm-6">Last Maintenance:</dt>
+                            <dd class="col-sm-6">@Model.LastMaintenanceDate.Value.ToString("MMMM dd, yyyy")</dd>
+                        }
+                        @if (Model.NextMaintenanceDate.HasValue)
+                        {
+                            <dt class="col-sm-6">Next Maintenance:</dt>
+                            <dd class="col-sm-6">
+                                @Model.NextMaintenanceDate.Value.ToString("MMMM dd, yyyy")
+                                @if (Model.NextMaintenanceDate.Value < DateTime.Now)
+                                {
+                                    <span class="badge bg-danger ms-2">Overdue</span>
+                                }
+                                else if ((Model.NextMaintenanceDate.Value - DateTime.Now).TotalDays <= 7)
+                                {
+                                    <span class="badge bg-warning ms-2">Due Soon</span>
+                                }
+                            </dd>
+                        }
+                    </dl>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow mb-3">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">Quick Stats</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <small class="text-muted">Age</small>
+                    <h4>@((DateTime.Now - Model.PurchaseDate).Days / 365) years</h4>
+                </div>
+                @if (Model.NextMaintenanceDate.HasValue)
+                {
+                    <div>
+                        <small class="text-muted">Days Until Maintenance</small>
+                        <h4>@((Model.NextMaintenanceDate.Value - DateTime.Now).Days) days</h4>
+                    </div>
+                }
+            </div>
+        </div>
+
+        @if (User.IsInRole("Admin"))
+        {
+            <div class="card shadow border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h6 class="mb-0">Danger Zone</h6>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted small">Permanently delete this equipment record.</p>
+                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger btn-sm w-100">
+                        <i class="bi bi-trash"></i> Delete Equipment
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -127,7 +127,7 @@
             },
             "Dapper": {
               "target": "Package",
-              "version": "[2.1.28, )"
+              "version": "[2.1.66, )"
             },
             "Microsoft.Data.Sqlite": {
               "target": "Package",

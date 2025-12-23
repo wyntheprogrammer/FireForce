@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Access Denied";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <div class="py-5">
+                <div class="mb-4">
+                    <i class="bi bi-ban fa-5x text-danger"></i>
+                </div>
+
+                <h1 class="display-3 fw-bold text-danger">403</h1>
+                <h2 class="display-6 mb-4">Acccess Denied</h2>
+
+                <div class="alert alert-danger d-inline-block">
+                    <i class="bi bi-exclamation-circle"></i> You dont't have permission to access this resource.
+                </div>
+
+                <p class="lead text-muted mt-4">
+                    This page or action requires special permission that your account doesn't currently have.
+                </p>
+
+                <div class="card shadow-sm mt-4 mx-auto" style="max-width: 500px;">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-info-cirle text-info"></i> What can you do?</h5>
+                        <ul class="list-unstyled text-start mt-3">
+                            <li class="mb-2">
+                                <i class="bi bi-check text-success"></i> Go back to the dashboard and continue working
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check text-success"></i> Contact your system administrator if you need access
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check text-success"></i> Check if you're logged in with the correct account
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg me-2">
+                        <i class="bi bi-home"></i> Go to Dashboard
+                    </a>
+                    <button onclick="history.back()" class="btn btn-outline-secondary btn-lg">
+                        <i class="bi bi-arrow-left"></i> Go Back
+                    </button>
+                </div>
+
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    <div class="mt-4 text-muted small">
+                        <p>
+                            Currently logged in as: <strong>@User.Identity.Name</strong>
+                            (@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value)
+                        </p>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>

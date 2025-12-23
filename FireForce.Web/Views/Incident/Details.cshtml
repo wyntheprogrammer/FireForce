@@ -1,55 +1,126 @@
-﻿@model FireForce.Application.DTOs.IncidentDTO
+﻿<!-- Views/Incident/Details.cshtml -->
+@model FireForce.Application.DTOs.IncidentDTO
 @{
     ViewData["Title"] = "Incident Details";
 }
 
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h1><i class="fas fa-building"></i> Incident Details</h1>
+    <h1><i class="bi bi-exclamation-triangle"></i> Incident Details</h1>
     <div>
         @if (User.IsInRole("Admin") || User.IsInRole("Captain"))
         {
             <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
-                <i class="fas fa-edit"></i> Edit
+                <i class="bi bi-edit"></i> Edit
             </a>
         }
         <a asp-action="Index" class="btn btn-secondary">
-            <i class="fas fa-arrow-left"></i> Back
+            <i class="bi bi-arrow-left"></i> Back
         </a>
     </div>
 </div>
 
-<div class="card shadow">
-    <div class="card-header bg-success text-white">
-        <h5 class="mb-0">Station Information</h5>
+<div class="row">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header bg-warning text-white">
+                <h5 class="mb-0">Incident Information</h5>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-4">Incident Number:</dt>
+                    <dd class="col-sm-8"><span class="badge bg-warning fs-6">@Model.IncidentNumber</span></dd>
+
+                    <dt class="col-sm-4">Type:</dt>
+                    <dd class="col-sm-8"><span class="badge bg-secondary">@Model.IncidentType</span></dd>
+
+                    <dt class="col-sm-4">Date & Time:</dt>
+                    <dd class="col-sm-8"><i class="bi bi-calendar"></i> @Model.IncidentDate.ToString("MMMM dd, yyyy hh:mm tt")</dd>
+
+                    <dt class="col-sm-4">Location:</dt>
+                    <dd class="col-sm-8"><i class="bi bi-map-marker-alt"></i> @Model.Location</dd>
+
+                    <dt class="col-sm-4">Description:</dt>
+                    <dd class="col-sm-8">@Model.Description</dd>
+
+                    <dt class="col-sm-4">Severity:</dt>
+                    <dd class="col-sm-8">
+                        <span class="badge bg-@(Model.Severity == "Critical" ? "danger" : Model.Severity == "High" ? "warning" : Model.Severity == "Medium" ? "info" : "secondary") fs-6">
+                            @Model.Severity
+                        </span>
+                    </dd>
+
+                    <dt class="col-sm-4">Status:</dt>
+                    <dd class="col-sm-8">
+                        <span class="badge bg-@(Model.Status == "Resolved" ? "success" : Model.Status == "InProgress" ? "primary" : "secondary") fs-6">
+                            @Model.Status
+                        </span>
+                    </dd>
+
+                    <dt class="col-sm-4">Assigned Station:</dt>
+                    <dd class="col-sm-8">
+                        @if (!string.IsNullOrEmpty(Model.StationName))
+                        {
+                            <i class="bi bi-building"></i> 
+                            @Model.StationName
+                            <a asp-controller="Station" asp-action="Details" asp-route-id="@Model.StationId" class="btn btn-sm btn-outline-primary ms-2">
+                                <i class="bi bi-eye"></i> View Station
+                            </a>
+                        }
+                        else
+                        {
+                            <span class="text-muted">No station assigned</span>
+                        }
+                    </dd>
+
+                    @if (Model.ResponseTime.HasValue)
+                    {
+                        <dt class="col-sm-4">Response Time:</dt>
+                        <dd class="col-sm-8">@Model.ResponseTime.Value.ToString("MMMM dd, yyyy hh:mm tt")</dd>
+                    }
+
+                    @if (Model.ResolvedTime.HasValue)
+                    {
+                        <dt class="col-sm-4">Resolved Time:</dt>
+                        <dd class="col-sm-8">@Model.ResolvedTime.Value.ToString("MMMM dd, yyyy hh:mm tt")</dd>
+                    }
+                </dl>
+            </div>
+        </div>
     </div>
-    <div class="card-body">
-        <dl class="row">
-            <dt class="col-sm-3">Incident Number:</dt>
-            <dd class="col-sm-9"><span class="badge bg-success fs-6">@Model.IncidentNumber</span></dd>
 
-            <dt class="col-sm-3">Incident Type:</dt>
-            <dd class="col-sm-9">@Model.IncidentType</dd>
+    <div class="col-md-4">
+        @if (Model.ResponseTime.HasValue && Model.ResolvedTime.HasValue)
+        {
+            <div class="card shadow mb-3">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Response Metrics</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <small class="text-muted">Response Duration</small>
+                        <h4>@((Model.ResponseTime.Value - Model.IncidentDate).TotalMinutes.ToString("F0")) mins</h4>
+                    </div>
+                    <div>
+                        <small class="text-muted">Resolution Duration</small>
+                        <h4>@((Model.ResolvedTime.Value - Model.ResponseTime.Value).TotalMinutes.ToString("F0")) mins</h4>
+                    </div>
+                </div>
+            </div>
+        }
 
-            <dt class="col-sm-3">Incident Date:</dt>
-            <dd class="col-sm-9"><i class="fas fa-map-marker-alt"></i>@Model.IncidentDate</dd>
-
-            <dt class="col-sm-3">Location:</dt>
-            <dd class="col-sm-9"><i class="fas fa-phone"></i>@Model.Location</dd>
-
-            <dt class="col-sm-3">Description:</dt>
-            <dd class="col-sm-9"><i class="fas fa-users"></i>@Model.Description</dd>
-
-            <dt class="col-sm-3">Severity:</dt>
-            <dd class="col-sm-9"><i class="fas fa-users"></i>@Model.Severity</dd>
-
-            <dt class="col-sm-3">Station Name:</dt>
-            <dd class="col-sm-9"><i class="fas fa-users"></i>@Model.StationName</dd>
-
-            <dt class="col-sm-3">Response Time:</dt>
-            <dd class="col-sm-9"><i class="fas fa-users"></i>@Model.ResponseTime</dd>
-       
-            <dt class="col-sm-3">Resolved Time:</dt>
-            <dd class="col-sm-9"><i class="fas fa-users"></i>@Model.ResolvedTime</dd>
-        </dl>
+        @if (User.IsInRole("Admin"))
+        {
+            <div class="card shadow border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h6 class="mb-0">Danger Zone</h6>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted small">Delete this incident record permanently.</p>
+                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger btn-sm w-100">
+                        <i class="bi bi-trash"></i> Delete Incident
+                    </a>
+                </div>
+            </div>
+        }
     </div>
 </div>

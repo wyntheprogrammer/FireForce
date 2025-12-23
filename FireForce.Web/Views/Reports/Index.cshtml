@@ -1,0 +1,107 @@
+﻿@{
+    ViewData["Title"] = "Reports";
+}
+
+<h1><i class="bi bi-chart-bar"></i> Reports</h1>
+
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h5><i class="bi bi-shield"></i> Firefighter Report</h5>
+            </div>
+            <div class="card-body">
+                <p>Generate a comprehensive report of all firefighters including badge numbers, ranks, and assignments.</p>
+                <form asp-action="GenerateFirefighterReport" method="post">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-download"></i> Generate Report
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card shadow">
+            <div class="card-header bg-success text-white">
+                <h5><i class="bi bi-building"></i> Station Report</h5>
+            </div>
+            <div class="card-body">
+                <p>Generate a report of all fire stations including capacity and status information.</p>
+                <form asp-action="GenerateStationReport" method="post">
+                    <button type="submit" class="btn btn-success">
+                        <i class="bi bi-download"></i> Generate Report
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card shadow">
+            <div class="card-header bg-warning text-white">
+                <h5><i class="bi bi-exclamation-triangle"></i> Incident Report</h5>
+            </div>
+            <div class="card-body">
+                <p>Generate a report of incidents with optional date range filtering.</p>
+                <form asp-action="GenerateIncidentReport" method="post">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Start Date</label>
+                            <input type="date" name="startDate" class="form-control" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">End Date</label>
+                            <input type="date" name="endDate" class="form-control" />
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-warning">
+                        <i class="bi bi-download"></i> Generate Report
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card shadow">
+            <div class="card-header bg-info text-white">
+                <h5><i class="bi bi-tools"></i> Equipment Report</h5>
+            </div>
+            <div class="card-body">
+                <p>Generate a report of all equipment including maintenance schedules and status.</p>
+                <form asp-action="GenerateEquipmentReport" method="post">
+                    <button type="submit" class="btn btn-info">
+                        <i class="bi bi-download"></i> Generate Report
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card shadow">
+            <div class="card-header bg-danger text-white">
+                <h5><i class="bi bi-history"></i> Audit Log Report</h5>
+            </div>
+            <div class="card-body">
+                <p>Generate a report of all system audit logs with optional date range.</p>
+                <form asp-action="GenerateAuditLogReport" method="post">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Start Date</label>
+                            <input type="date" name="startDate" class="form-control" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">End Date</label>
+                            <input type="date" name="endDate" class="form-control" />
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-danger">
+                        <i class="bi bi-download"></i> Generate Report
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

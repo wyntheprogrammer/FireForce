@@ -1,12 +1,16 @@
 ﻿@model IEnumerable<FireForce.Application.DTOs.IncidentDTO>
 @{
     ViewData["Title"] = "Dashboard";
+    var incidents = Model.ToList();
+    var incidentsBySeverity = incidents.GroupBy(i => i.Severity).Select(g => new { incidentsBySeverity = g.Key, CountdownEvent = g.Count() }).ToList();
+    var incidentsByStatus = incidents.GroupBy(i => i.Status).Select(g => new { Status = g.Key, Count = g.Count() }).ToList();
+    var incidentsByType = incidents.GroupBy(i => i.IncidentType).Select(g => new { Type = g.Key, Count = g.Count() }).ToList();
 }
 
 <div class="row mb-4">
     <div class="col-12">
-        <h1 class="display-4"><i class="fas fa-tachometer-alt"></i> Dashboard</h1>
-        <p class="lead">Welcome to FireForce Management System</p>
+        <h1 class="display-4"><i class="bi bi-tachometer-alt"></i> Dashboard</h1>
+        <p class="lead">Welcome to FireForce Management System - <strong>@User.FindFirst("FullName")?.Value</strong></p>
     </div>
 </div>
 
@@ -20,13 +24,13 @@
                         <h2 class="mb-0">@ViewBag.TotalFirefighters</h2>
                     </div>
                     <div>
-                        <i class="fas fa-user-shield fa-3x opacity-50"></i>
+                        <i class="bi bi-shield fa-3x opacity-50"></i>
                     </div>
                 </div>
             </div>
             <div class="card-footer">
                 <a href="@Url.Action("Index", "Firefighter")" class="text-white text-decoration-none small">
-                    View Details <i class="fas fa-arrow-right"></i>
+                    View Details <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -41,13 +45,13 @@
                         <h2 class="mb-0">@ViewBag.TotalStations</h2>
                     </div>
                     <div>
-                        <i class="fas fa-building fa-3x opacity-50"></i>
+                        <i class="bi bi-building fa-3x opacity-50"></i>
                     </div>
                 </div>
             </div>
             <div class="card-footer">
                 <a href="@Url.Action("Index", "Station")" class="text-white text-decoration-none small">
-                    View Details <i class="fas fa-arrow-right"></i>
+                    View Details <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -62,13 +66,13 @@
                         <h2 class="mb-0">@ViewBag.TotalIncidents</h2>
                     </div>
                     <div>
-                        <i class="fas fa-exclamation-triangle fa-3x opacity-50"></i>
+                        <i class="bi bi-exclamation-triangle fa-3x opacity-50"></i>
                     </div>
                 </div>
             </div>
             <div class="card-footer">
                 <a href="@Url.Action("Index", "Incident")" class="text-white text-decoration-none small">
-                    View Details <i class="fas fa-arrow-right"></i>
+                    View Details <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -83,14 +87,65 @@
                         <h2 class="mb-0">@ViewBag.TotalEquipment</h2>
                     </div>
                     <div>
-                        <i class="fas fa-tools fa-3x opacity-50"></i>
+                        <i class="bi bi-tools fa-3x opacity-50"></i>
                     </div>
                 </div>
             </div>
             <div class="card-footer">
                 <a href="@Url.Action("Index", "Equipment")" class="text-white text-decoration-none small">
-                    View Details <i class="fas fa-arrow-right"></i>
+                    View Details <i class="bi bi-arrow-right"></i>
                 </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-danger text-white">
+                <h5 class="mb-0"><i class="bi bi-chart-pie"></i> Incidents by Severity</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="severityChart" height="250"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="bi bi-chart-bar"></i> Incidents by Type</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="typeChart" height="250"></canvas>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0"><i class="bi bi-chart-line"></i> Incident Status Overview</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="statusChart" height="250"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0"><i class="bi bi-calendar-alt"></i> Recent Activity Trend</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="trendChart" height="250"></canvas>
             </div>
         </div>
     </div>
@@ -100,7 +155,7 @@
     <div class="col-12">
         <div class="card shadow">
             <div class="card-header bg-danger text-white">
-                <h5 class="mb-0"><i class="fas fa-clock"></i> Recent Incidents</h5>
+                <h5 class="mb-0"><i class="bi bi-clock"></i> Recent Incidents</h5>
             </div>
             <div class="card-body">
                 @if (Model != null && Model.Any())
@@ -149,3 +204,170 @@
         </div>
     </div>
 </div>
+
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script>
+        // Severity Chart (Doughnut)
+        const severityCtx = document.getElementById('severityChart').getContext('2d');
+        new Chart(severityCtx, {
+            type: 'doughnut',
+            data: {
+                labels: [@Html.Raw(string.Join(",", incidentsBySeverity.Select(x => $"'{x.incidentsBySeverity}'")))],
+                datasets: [{
+                    data: [@Html.Raw(string.Join(",", incidentsBySeverity.Select(x => x.CountdownEvent)))],
+                    backgroundColor: [
+                        'rgba(220, 53, 69, 0.8)',   // Critical - Red
+                        'rgba(255, 193, 7, 0.8)',   // High - Yellow
+                        'rgba(13, 202, 240, 0.8)',  // Medium - Cyan
+                        'rgba(108, 117, 125, 0.8)'  // Low - Gray
+                    ],
+                    borderColor: [
+                        'rgba(220, 53, 69, 1)',
+                        'rgba(255, 193, 7, 1)',
+                        'rgba(13, 202, 240, 1)',
+                        'rgba(108, 117, 125, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    },
+                    title: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Type Chart (Bar)
+        const typeCtx = document.getElementById('typeChart').getContext('2d');
+        new Chart(typeCtx, {
+            type: 'bar',
+            data: {
+                labels: [@Html.Raw(string.Join(",", incidentsByType.Select(x => $"'{x.Type}'")))],
+                datasets: [{
+                    label: 'Number of Incidents',
+                    data: [@Html.Raw(string.Join(",", incidentsByType.Select(x => x.Count)))],
+                    backgroundColor: 'rgba(13, 110, 253, 0.8)',
+                    borderColor: 'rgba(13, 110, 253, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+
+        // Status Chart (Pie)
+        const statusCtx = document.getElementById('statusChart').getContext('2d');
+        new Chart(statusCtx, {
+            type: 'pie',
+            data: {
+                labels: [@Html.Raw(string.Join(",", incidentsByStatus.Select(x => $"'{x.Status}'")))],
+                datasets: [{
+                    data: [@Html.Raw(string.Join(",", incidentsByStatus.Select(x => x.Count)))],
+                    backgroundColor: [
+                        'rgba(25, 135, 84, 0.8)',   // Resolved - Green
+                        'rgba(13, 110, 253, 0.8)',  // InProgress - Blue
+                        'rgba(108, 117, 125, 0.8)', // Reported - Gray
+                        'rgba(220, 53, 69, 0.8)'    // Closed - Red
+                    ],
+                    borderColor: [
+                        'rgba(25, 135, 84, 1)',
+                        'rgba(13, 110, 253, 1)',
+                        'rgba(108, 117, 125, 1)',
+                        'rgba(220, 53, 69, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // Trend Chart (Line) - Last 7 days
+        const trendCtx = document.getElementById('trendChart').getContext('2d');
+
+        // Calculate incidents per day for last 7 days
+        const today = new Date();
+        const last7Days = [];
+        const incidentCounts = [];
+
+        for (let i = 6; i >= 0; i--) {
+            const date = new Date(today);
+            date.setDate(date.getDate() - i);
+            const dateStr = date.toISOString().split('T')[0];
+            last7Days.push(date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }));
+
+            const count = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(incidents.Select(i => i.IncidentDate.ToString("yyyy-MM-dd")).ToList()))
+                .filter(d => d === dateStr).length;
+            incidentCounts.push(count);
+        }
+
+        new Chart(trendCtx, {
+            type: 'line',
+            data: {
+                labels: last7Days,
+                datasets: [{
+                    label: 'Incidents',
+                    data: incidentCounts,
+                    backgroundColor: 'rgba(13, 202, 240, 0.2)',
+                    borderColor: 'rgba(13, 202, 240, 1)',
+                    borderWidth: 3,
+                    tension: 0.4,
+                    fill: true,
+                    pointBackgroundColor: 'rgba(13, 202, 240, 1)',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+}

@@ -36,7 +36,7 @@ namespace FireForce.Application.DTOs
 
 
         [DataType(DataType.Date)]
-        public DateTime? NextMaintenenceDatae { get; set; }
+        public DateTime? NextMaintenanceDate { get; set; }
 
 
         [Required(ErrorMessage = "Status is required")]

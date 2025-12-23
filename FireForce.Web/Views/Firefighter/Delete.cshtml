@@ -3,51 +3,48 @@
     ViewData["Title"] = "Delete Firefighter";
 }
 
-<h1 class="text-danger"><i class="fas fa-exclamation-triangle"></i> Delete Firefighter</h1>
+<h1 class="text-danger"><i class="bi bi-exclamation-triangle"></i> Delete Firefighter</h1>
 
 <div class="alert alert-danger" role="alert">
     <h5 class="alert-heading">Are you sure you want to delete this firefighter?</h5>
-    <p>This action cannot be undone. The firefighter record will be permanently remove from the system.</p>
+    <p>This action cannot be undone. The firefighter record will be permanently removed from the system.</p>
 </div>
 
-<div class="row">
-    <div class="col-md-8">
-        <div class="card shadow border-danger">
-            <h5 class="mb-0">Firefighter Information</h5>
-        </div>
-        <div class="card-body">
-            <dl class="row">
-                <dt class="col-sm-4">Badge Number:</dt>
-                <dd class="col-sm-8">@Model.BadgeNumber</dd>
+<div class="card shadow border-danger">
+    <div class="card-header bg-danger text-white">
+        <h5 class="mb-0">Firefighter Information</h5>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-4">Badge Number:</dt>
+            <dd class="col-sm-8">@Model.BadgeNumber</dd>
 
-                <dt class="col-sm-4">Fullname:</dt>
-                <dd class="col-sm-8">@Model.FullName</dd>
+            <dt class="col-sm-4">Full Name:</dt>
+            <dd class="col-sm-8">@Model.FullName</dd>
 
-                <dt class="col-sm-4">Rank:</dt>
-                <dd class="col-sm-8">@Model.Rank</dd>
+            <dt class="col-sm-4">Rank:</dt>
+            <dd class="col-sm-8">@Model.Rank</dd>
 
-                <dt class="col-sm-4">Phone Number:</dt>
-                <dd class="col-sm-8">@Model.PhoneNumber</dd>
+            <dt class="col-sm-4">Phone Number:</dt>
+            <dd class="col-sm-8">@Model.PhoneNumber</dd>
 
-                <dt class="col-sm-4">Station:</dt>
-                <dd class="col-sm-8">@(Model.StationName ?? "Unassigned")</dd>
+            <dt class="col-sm-4">Station:</dt>
+            <dd class="col-sm-8">@(Model.StationName ?? "Unassigned")</dd>
 
-                <dt class="col-sm-4">Status:</dt>
-                <dd class="col-sm-8">@Model.Status</dd>
-            </dl>
+            <dt class="col-sm-4">Status:</dt>
+            <dd class="col-sm-8">@Model.Status</dd>
+        </dl>
 
-            <form asp-action="Delete" method="post">
-                <input type="hidden" asp-for="Id"/>
-                <div class="d-flex justify-content-between mt-4">
-                    <a asp-action="Index" class="btn btn-secondary">
-                        <i class="fas fa-arrow-left"></i> No, Go Back
-                    </a>
-
-                    <button type="submit" class="btn btn-danger">
-                        <i class="fas fa-trash"></i> Yes, Delete Firefighter
-                    </button>
-                </div>
-            </form>
-        </div>
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="d-flex justify-content-between mt-4">
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> No, Go Back
+                </a>
+                <button type="submit" class="btn btn-danger">
+                    <i class="fas fa-trash"></i> Yes, Delete Firefighter
+                </button>
+            </div>
+        </form>
     </div>
 </div>
