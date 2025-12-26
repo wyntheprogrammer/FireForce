@@ -1,0 +1,542 @@
+﻿@using FireForce.Application.DTOs
+@{
+    ViewData["Title"] = "Analytics Dashboard";
+    var firefighters = (ViewBag.Firefighters as IEnumerable<FirefighterDTO>).ToList();
+    var stations = (ViewBag.Stations as IEnumerable<StationDTO>).ToList();
+    var incidents = (ViewBag.Incidents as IEnumerable<IncidentDTO>).ToList();
+    var equipment = (ViewBag.Equipment as IEnumerable<EquipmentDTO>).ToList();
+}
+
+<div class="row mb-4">
+    <div class="col-12">
+        <h1 class="display-5"><i class="fas fa-chart-line"></i> Analytics Dashboard</h1>
+        <p class="lead">Comprehensive system analytics and insights</p>
+    </div>
+</div>
+
+<!-- Navigation Tabs -->
+<ul class="nav nav-tabs mb-4" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="tab" href="#overview">
+            <i class="fas fa-tachometer-alt"></i> Overview
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#firefighters-tab">
+            <i class="fas fa-user-shield"></i> Firefighters
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#incidents-tab">
+            <i class="fas fa-exclamation-triangle"></i> Incidents
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#equipment-tab">
+            <i class="fas fa-tools"></i> Equipment
+        </a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <!-- Overview Tab -->
+    <div id="overview" class="tab-pane fade show active">
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card shadow text-center">
+                    <div class="card-body">
+                        <i class="fas fa-user-shield fa-3x text-primary mb-3"></i>
+                        <h3>@firefighters.Count</h3>
+                        <p class="text-muted mb-0">Total Firefighters</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow text-center">
+                    <div class="card-body">
+                        <i class="fas fa-building fa-3x text-success mb-3"></i>
+                        <h3>@stations.Count</h3>
+                        <p class="text-muted mb-0">Fire Stations</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow text-center">
+                    <div class="card-body">
+                        <i class="fas fa-exclamation-triangle fa-3x text-warning mb-3"></i>
+                        <h3>@incidents.Count</h3>
+                        <p class="text-muted mb-0">Total Incidents</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow text-center">
+                    <div class="card-body">
+                        <i class="fas fa-tools fa-3x text-info mb-3"></i>
+                        <h3>@equipment.Count</h3>
+                        <p class="text-muted mb-0">Equipment Items</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-map-marker-alt"></i> Stations Distribution</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="stationsChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0"><i class="fas fa-calendar"></i> Monthly Incidents</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="monthlyIncidentsChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firefighters Tab -->
+    <div id="firefighters-tab" class="tab-pane fade">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-chart-pie"></i> Firefighters by Rank</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="rankChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0"><i class="fas fa-chart-bar"></i> Firefighters by Station</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="stationDistributionChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0"><i class="fas fa-users"></i> Status Distribution</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="statusDistChart" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Incidents Tab -->
+    <div id="incidents-tab" class="tab-pane fade">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0"><i class="fas fa-fire"></i> By Type</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="incidentTypeChart" height="250"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-warning text-white">
+                        <h5 class="mb-0"><i class="fas fa-exclamation"></i> By Severity</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="incidentSeverityChart" height="250"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0"><i class="fas fa-tasks"></i> By Status</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="incidentStatusChart" height="250"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-chart-area"></i> Incident Timeline (Last 30 Days)</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="incidentTimelineChart" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Equipment Tab -->
+    <div id="equipment-tab" class="tab-pane fade">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0"><i class="fas fa-wrench"></i> Equipment by Type</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="equipmentTypeChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-warning text-white">
+                        <h5 class="mb-0"><i class="fas fa-check-circle"></i> Equipment Status</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="equipmentStatusChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0"><i class="fas fa-tools"></i> Equipment by Station</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="equipmentStationChart" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script>
+        // Prepare data
+        const firefightersData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(firefighters));
+        const stationsData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(stations));
+        const incidentsData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(incidents));
+        const equipmentData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(equipment));
+
+        // Chart colors
+        const colors = {
+            primary: 'rgba(13, 110, 253, 0.8)',
+            success: 'rgba(25, 135, 84, 0.8)',
+            danger: 'rgba(220, 53, 69, 0.8)',
+            warning: 'rgba(255, 193, 7, 0.8)',
+            info: 'rgba(13, 202, 240, 0.8)',
+            secondary: 'rgba(108, 117, 125, 0.8)'
+        };
+
+        // Stations Chart
+        const stationsByCity = {};
+        stationsData.forEach(s => {
+            stationsByCity[s.City] = (stationsByCity[s.City] || 0) + 1;
+        });
+
+        new Chart(document.getElementById('stationsChart'), {
+            type: 'bar',
+            data: {
+                labels: Object.keys(stationsByCity),
+                datasets: [{
+                    label: 'Stations',
+                    data: Object.values(stationsByCity),
+                    backgroundColor: colors.primary
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } }
+            }
+        });
+
+        // Monthly Incidents Chart
+        const monthlyIncidents = {};
+        incidentsData.forEach(i => {
+            const month = new Date(i.IncidentDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+            monthlyIncidents[month] = (monthlyIncidents[month] || 0) + 1;
+        });
+
+        new Chart(document.getElementById('monthlyIncidentsChart'), {
+            type: 'line',
+            data: {
+                labels: Object.keys(monthlyIncidents),
+                datasets: [{
+                    label: 'Incidents',
+                    data: Object.values(monthlyIncidents),
+                    backgroundColor: 'rgba(220, 53, 69, 0.2)',
+                    borderColor: colors.danger,
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { y: { beginAtZero: true } }
+            }
+        });
+
+        // Firefighters by Rank
+        const rankCounts = {};
+        firefightersData.forEach(f => {
+            rankCounts[f.Rank] = (rankCounts[f.Rank] || 0) + 1;
+        });
+
+        new Chart(document.getElementById('rankChart'), {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(rankCounts),
+                datasets: [{
+                    data: Object.values(rankCounts),
+                    backgroundColor: [colors.primary, colors.success, colors.danger, colors.warning, colors.info, colors.secondary]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'bottom' } }
+            }
+        });
+
+        // Firefighters by Station
+        const ffByStation = {};
+        firefightersData.forEach(f => {
+            const station = f.StationName || 'Unassigned';
+            ffByStation[station] = (ffByStation[station] || 0) + 1;
+        });
+
+        new Chart(document.getElementById('stationDistributionChart'), {
+            type: 'bar',
+            data: {
+                labels: Object.keys(ffByStation),
+                datasets: [{
+                    label: 'Firefighters',
+                    data: Object.values(ffByStation),
+                    backgroundColor: colors.success
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: { x: { beginAtZero: true } }
+            }
+        });
+
+        // Status Distribution
+        const statusCounts = {};
+        firefightersData.forEach(f => {
+            statusCounts[f.Status] = (statusCounts[f.Status] || 0) + 1;
+        });
+
+        new Chart(document.getElementById('statusDistChart'), {
+            type: 'bar',
+            data: {
+                labels: Object.keys(statusCounts),
+                datasets: [{
+                    label: 'Count',
+                    data: Object.values(statusCounts),
+                    backgroundColor: colors.info
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { y: { beginAtZero: true } }
+            }
+        });
+
+        // Incident Charts
+        const incidentTypes = {};
+        incidentsData.forEach(i => {
+            incidentTypes[i.IncidentType] = (incidentTypes[i.IncidentType] || 0) + 1;
+        });
+
+        new Chart(document.getElementById('incidentTypeChart'), {
+            type: 'polarArea',
+            data: {
+                labels: Object.keys(incidentTypes),
+                datasets: [{
+                    data: Object.values(incidentTypes),
+                    backgroundColor: [colors.danger, colors.warning, colors.info, colors.success, colors.primary]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'bottom' } }
+            }
+        });
+
+        const incidentSeverity = {};
+        incidentsData.forEach(i => {
+            incidentSeverity[i.Severity] = (incidentSeverity[i.Severity] || 0) + 1;
+        });
+
+        new Chart(document.getElementById('incidentSeverityChart'), {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(incidentSeverity),
+                datasets: [{
+                    data: Object.values(incidentSeverity),
+                    backgroundColor: [colors.danger, colors.warning, colors.info, colors.secondary]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        const incidentStatus = {};
+        incidentsData.forEach(i => {
+            incidentStatus[i.Status] = (incidentStatus[i.Status] || 0) + 1;
+        });
+
+        new Chart(document.getElementById('incidentStatusChart'), {
+            type: 'pie',
+            data: {
+                labels: Object.keys(incidentStatus),
+                datasets: [{
+                    data: Object.values(incidentStatus),
+                    backgroundColor: [colors.success, colors.primary, colors.secondary, colors.danger]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Incident Timeline (Last 30 days)
+        const last30Days = {};
+        for (let i = 29; i >= 0; i--) {
+            const date = new Date();
+            date.setDate(date.getDate() - i);
+            const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            last30Days[dateStr] = 0;
+        }
+
+        incidentsData.forEach(i => {
+            const incidentDate = new Date(i.IncidentDate);
+            const daysAgo = Math.floor((new Date() - incidentDate) / (1000 * 60 * 60 * 24));
+            if (daysAgo <= 30) {
+                const dateStr = incidentDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                if (last30Days.hasOwnProperty(dateStr)) {
+                    last30Days[dateStr]++;
+                }
+            }
+        });
+
+        new Chart(document.getElementById('incidentTimelineChart'), {
+            type: 'line',
+            data: {
+                labels: Object.keys(last30Days),
+                datasets: [{
+                    label: 'Incidents',
+                    data: Object.values(last30Days),
+                    backgroundColor: 'rgba(13, 110, 253, 0.2)',
+                    borderColor: colors.primary,
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { y: { beginAtZero: true } }
+            }
+        });
+
+        // Equipment Charts
+        const equipTypes = {};
+        equipmentData.forEach(e => {
+            equipTypes[e.Type] = (equipTypes[e.Type] || 0) + 1;
+        });
+
+        new Chart(document.getElementById('equipmentTypeChart'), {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(equipTypes),
+                datasets: [{
+                    data: Object.values(equipTypes),
+                    backgroundColor: [colors.info, colors.primary, colors.success, colors.warning, colors.danger]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'right' } }
+            }
+        });
+
+        const equipStatus = {};
+        equipmentData.forEach(e => {
+            equipStatus[e.Status] = (equipStatus[e.Status] || 0) + 1;
+        });
+
+        new Chart(document.getElementById('equipmentStatusChart'), {
+            type: 'bar',
+            data: {
+                labels: Object.keys(equipStatus),
+                datasets: [{
+                    label: 'Equipment',
+                    data: Object.values(equipStatus),
+                    backgroundColor: [colors.success, colors.primary, colors.warning, colors.secondary]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { y: { beginAtZero: true } }
+            }
+        });
+
+        const equipByStation = {};
+        equipmentData.forEach(e => {
+            const station = e.StationName || 'Unassigned';
+            equipByStation[station] = (equipByStation[station] || 0) + 1;
+        });
+
+        new Chart(document.getElementById('equipmentStationChart'), {
+            type: 'bar',
+            data: {
+                labels: Object.keys(equipByStation),
+                datasets: [{
+                    label: 'Equipment Items',
+                    data: Object.values(equipByStation),
+                    backgroundColor: colors.danger
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { y: { beginAtZero: true } }
+            }
+        });
+    </script>
+}

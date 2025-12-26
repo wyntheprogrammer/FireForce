@@ -4,47 +4,210 @@
 }
 
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h1><i class="bi bi-building"></i> Station Details</h1>
+    <h1><i class="fas fa-building"></i> Station Details</h1>
     <div>
         @if (User.IsInRole("Admin") || User.IsInRole("Captain"))
         {
             <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
-                <i class="bi bi-edit"></i> Edit
+                <i class="fas fa-edit"></i> Edit
             </a>
         }
         <a asp-action="Index" class="btn btn-secondary">
-            <i class="bi bi-arrow-left"></i> Back
+            <i class="fas fa-arrow-left"></i> Back to List
         </a>
     </div>
 </div>
 
-<div class="card shadow">
-    <div class="card-header bg-success text-white">
-        <h5 class="mb-0">Station Information</h5>
+<div class="row">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">Station Information</h5>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-3">Station Number:</dt>
+                    <dd class="col-sm-9"><span class="badge bg-success fs-6">@Model.StationNumber</span></dd>
+
+                    <dt class="col-sm-3">Name:</dt>
+                    <dd class="col-sm-9">@Model.Name</dd>
+
+                    <dt class="col-sm-3">Address:</dt>
+                    <dd class="col-sm-9"><i class="fas fa-map-marker-alt"></i> @Model.Address, @Model.City</dd>
+
+                    <dt class="col-sm-3">City:</dt>
+                    <dd class="col-sm-9">@Model.City</dd>
+
+                    <dt class="col-sm-3">Phone:</dt>
+                    <dd class="col-sm-9"><i class="fas fa-phone"></i> @Model.PhoneNumber</dd>
+
+                    <dt class="col-sm-3">Capacity:</dt>
+                    <dd class="col-sm-9"><i class="fas fa-users"></i> @Model.Capacity firefighters</dd>
+
+                    <dt class="col-sm-3">Status:</dt>
+                    <dd class="col-sm-9">
+                        <span class="badge bg-@(Model.Status == "Active" ? "success" : Model.Status == "Maintenance" ? "warning" : "secondary") fs-6">
+                            @Model.Status
+                        </span>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h6 class="mb-0"><i class="fas fa-user-shield"></i> Firefighters Distribution</h6>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="firefightersChart" height="200"></canvas>
+                        <div id="noFirefighters" class="text-center text-muted py-3" style="display: none;">
+                            <i class="fas fa-info-circle"></i> No firefighters assigned
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-header bg-info text-white">
+                        <h6 class="mb-0"><i class="fas fa-tools"></i> Equipment Distribution</h6>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="equipmentChart" height="200"></canvas>
+                        <div id="noEquipment" class="text-center text-muted py-3" style="display: none;">
+                            <i class="fas fa-info-circle"></i> No equipment assigned
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="card-body">
-        <dl class="row">
-            <dt class="col-sm-3">Station Number:</dt>
-            <dd class="col-sm-9"><span class="badge bg-success fs-6">@Model.StationNumber</span></dd>
-       
-            <dt class="col-sm-3">Name:</dt>
-            <dd class="col-sm-9">@Model.Name</dd>
 
-            <dt class="col-sm-3">Address:</dt>
-            <dd class="col-sm-9"><i class="bi bi-map-marker-alt"></i> @Model.Address, @Model.City</dd>
+    <div class="col-md-4">
+        <div class="card shadow mb-3">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">Station Stats</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3 text-center">
+                    <i class="fas fa-user-shield fa-2x text-primary mb-2"></i>
+                    <p class="text-muted mb-1 small">Assigned Firefighters</p>
+                    <h4 class="text-primary mb-0" id="totalFirefighters">-</h4>
+                </div>
+                <hr>
+                <div class="mb-3 text-center">
+                    <i class="fas fa-tools fa-2x text-info mb-2"></i>
+                    <p class="text-muted mb-1 small">Equipment Items</p>
+                    <h4 class="text-info mb-0" id="totalEquipment">-</h4>
+                </div>
+                <hr>
+                <div class="text-center">
+                    <i class="fas fa-exclamation-triangle fa-2x text-warning mb-2"></i>
+                    <p class="text-muted mb-1 small">Recent Incidents</p>
+                    <h4 class="text-warning mb-0" id="totalIncidents">-</h4>
+                </div>
+            </div>
+        </div>
 
-            <dt class="col-sm-3">Phone:</dt>
-            <dd class="col-sm-9"><i class="bi bi-phone"></i>@Model.PhoneNumber</dd>
-
-            <dt class="col-sm-3">Capacity:</dt>
-            <dd class="col-sm-9"><i class="bi bi-users"></i>@Model.Capacity</dd>
-
-            <dt class="col-sm-3">Satus:</dt>
-            <dd class="col-sm-9">
-                <span class="badge bg-@(Model.Status == "Active" ? "success" : Model.Status == "Maintenance" ? "warning" : "secondary") fs-6">
-                    @Model.Status
-                </span>
-            </dd>
-        </dl>
+        @if (User.IsInRole("Admin"))
+        {
+            <div class="card shadow border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h6 class="mb-0">Danger Zone</h6>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted small">Deleting this station will affect all associated firefighters and equipment.</p>
+                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger btn-sm w-100">
+                        <i class="fas fa-trash"></i> Delete Station
+                    </a>
+                </div>
+            </div>
+        }
     </div>
 </div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script>
+        const stationId = @Model.Id;
+
+        console.log("Loading stats for station:", stationId);
+
+        fetch(`/api/station/${stationId}/stats`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Failed to load station stats");
+                }
+                return response.json(); // ✅ REQUIRED
+            })
+            .then(data => {
+                console.log("Station stats received:", data);
+
+                // Update stats
+                document.getElementById('totalFirefighters').textContent = data.totalFirefighters ?? 0;
+                document.getElementById('totalEquipment').textContent = data.totalEquipment ?? 0;
+                document.getElementById('totalIncidents').textContent = data.totalIncidents ?? 0;
+
+                // Firefighters Chart
+                if (data.firefighters?.length) {
+                    const labels = data.firefighters.map(f => f.rank);
+                    const values = data.firefighters.map(f => f.count);
+
+                    new Chart(document.getElementById('firefightersChart'), {
+                        type: 'doughnut',
+                        data: {
+                            labels,
+                            datasets: [{
+                                data: values,
+                                backgroundColor: [
+                                    '#0d6efd', '#198754', '#ffc107', '#dc3545'
+                                ]
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                                legend: { position: 'bottom' }
+                            }
+                        }
+                    });
+                } else {
+                    document.getElementById('firefightersChart').style.display = 'none';
+                    document.getElementById('noFirefighters').style.display = 'block';
+                }
+
+                // Equipment Chart
+                if (data.equipment?.length) {
+                    const labels = data.equipment.map(e => e.type);
+                    const values = data.equipment.map(e => e.count);
+
+                    new Chart(document.getElementById('equipmentChart'), {
+                        type: 'bar',
+                        data: {
+                            labels,
+                            datasets: [{
+                                data: values,
+                                backgroundColor: '#0dcaf0'
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: { beginAtZero: true, ticks: { stepSize: 1 } }
+                            },
+                            plugins: {
+                                legend: { display: false }
+                            }
+                        }
+                    });
+                } else {
+                    document.getElementById('equipmentChart').style.display = 'none';
+                    document.getElementById('noEquipment').style.display = 'block';
+                }
+            })
+            .catch(err => {
+                console.error(err);
+            });
+    </script>
+}

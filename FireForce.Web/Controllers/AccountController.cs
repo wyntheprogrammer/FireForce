@@ -104,7 +104,7 @@ namespace FireForce.Web.Controllers
             }
 
             TempData["SuccessMessage"] = "User registered successfully!";
-            return RedirectToAction("Index", "Users");
+            return RedirectToAction("Index", "Home");
         }
 
         [Authorize]
@@ -142,6 +142,7 @@ namespace FireForce.Web.Controllers
             TempData["SuccessMessage"] = "Password changed successfully!";
             return RedirectToAction("Index", "Home");
         }
+
 
         [Authorize]
         [HttpPost]

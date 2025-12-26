@@ -22,7 +22,7 @@ namespace FireForce.Infrastructure.Repositories
         public async Task<IEnumerable<Firefighter>> GetByStationIdAsync(int stationId)
         {
             using var connection = _context.CreateConnection();
-            var sql = "SELECT * FROM Firefighters WHERE StatonId = @StationId AND IsDeleted = 0";
+            var sql = "SELECT * FROM Firefighters WHERE StationId = @StationId AND IsDeleted = 0";
             return await connection.QueryAsync<Firefighter>(sql, new { StationId = stationId });
         }
     }

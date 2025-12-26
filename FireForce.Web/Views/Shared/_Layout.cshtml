@@ -52,6 +52,11 @@
                             </li>
                             @if (User.IsInRole("Admin") || User.IsInRole("Captain"))
                             {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Analytics" asp-action="Index">
+                                        <i class="bi bi-chart-line"></i> Analytics
+                                    </a>
+                                </li>
                                 <li class ="nav-item">
                                     <a class="nav-link" asp-controller="Reports" asp-action="Index">
                                         <i class = "bi bi-chart-bar"></i> Reports

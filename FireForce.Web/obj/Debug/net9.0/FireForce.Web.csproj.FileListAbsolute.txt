@@ -130,3 +130,6 @@ C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\refint\
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\FireForce.Web.pdb
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\FireForce.Web.genruntimeconfig.cache
 C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\ref\FireForce.Web.dll
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\compressed\u1te2lks4t-4auj6r7g7o.gz
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\compressed\41rie10xm6-wopsamlasg.gz
+C:\Users\jpbacolod\source\repos\FireForce\FireForce.Web\obj\Debug\net9.0\compressed\xig1lc6xaa-79l73tsp3y.gz

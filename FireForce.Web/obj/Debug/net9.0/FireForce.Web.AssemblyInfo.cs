@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FireForce.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22faff909a6b530f6f598fd6e683a9fdff38c3e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+faa22913f4176b16abeb8e251b127fe5cc4c8260")]
 [assembly: System.Reflection.AssemblyProductAttribute("FireForce.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FireForce.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

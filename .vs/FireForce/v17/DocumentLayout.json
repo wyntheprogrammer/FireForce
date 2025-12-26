@@ -3,116 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A507DB06-AE72-41ED-B4BD-3C243EFD473F}|FireForce.Application\\FireForce.Application.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.application\\fireforce.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A507DB06-AE72-41ED-B4BD-3C243EFD473F}|FireForce.Application\\FireForce.Application.csproj|solutionrelative:fireforce.application\\fireforce.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\controllers\\stationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\controllers\\stationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\equipment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\equipment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\incident\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\incident\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\station\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\station\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\firefighter\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\firefighter\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\firefighter\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\firefighter\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\reports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\reports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\firefighter\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\firefighter\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\firefighter\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\firefighter\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\incident\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\incident\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B8995C9-FCB0-4345-AE73-A801543D333F}|FireForce.Infrastructure\\FireForce.Infrastructure.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.infrastructure\\data\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B8995C9-FCB0-4345-AE73-A801543D333F}|FireForce.Infrastructure\\FireForce.Infrastructure.csproj|solutionrelative:fireforce.infrastructure\\data\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\incident\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\incident\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\incident\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\incident\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\equipment\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\equipment\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\equipment\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\equipment\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\equipment\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\equipment\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\auditlog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\auditlog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\fireforce.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\fireforce.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\controllers\\statscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\controllers\\statscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\station\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\station\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\equipment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\equipment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\analytics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\analytics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\incident\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\incident\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\station\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\station\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5B8995C9-FCB0-4345-AE73-A801543D333F}|FireForce.Infrastructure\\FireForce.Infrastructure.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.infrastructure\\repositories\\firefighterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B8995C9-FCB0-4345-AE73-A801543D333F}|FireForce.Infrastructure\\FireForce.Infrastructure.csproj|solutionrelative:fireforce.infrastructure\\repositories\\firefighterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\station\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\station\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\controllers\\analyticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\controllers\\analyticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|c:\\users\\jpbacolod\\source\\repos\\fireforce\\fireforce.web\\views\\firefighter\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{581A81E3-ACDA-4082-A8B1-3255C793B4F3}|FireForce.Web\\FireForce.Web.csproj|solutionrelative:fireforce.web\\views\\firefighter\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -122,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -162,366 +102,167 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Index.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Station\\Index.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Index.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Station\\Index.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADQAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T08:15:15.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Firefighter\\Delete.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Firefighter\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Firefighter\\Delete.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Firefighter\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T08:04:42.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Firefighter\\Details.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Firefighter\\Details.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Firefighter\\Details.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Firefighter\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T07:58:10.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAlwB8AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T07:53:31.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Firefighter\\Index.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Firefighter\\Index.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Firefighter\\Index.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Firefighter\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T07:46:18.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAnwBkAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T07:16:53.752Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Details.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Incident\\Details.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Details.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Incident\\Details.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T06:04:30.836Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Index.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Incident\\Index.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Index.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Incident\\Index.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADYAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-22T06:22:27.832Z",
+              "Title": "FirefighterRepository.cs",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Infrastructure\\Repositories\\FirefighterRepository.cs",
+              "RelativeDocumentMoniker": "FireForce.Infrastructure\\Repositories\\FirefighterRepository.cs",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Infrastructure\\Repositories\\FirefighterRepository.cs",
+              "RelativeToolTip": "FireForce.Infrastructure\\Repositories\\FirefighterRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAiwBgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:35:23.82Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "StatsController.cs",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Controllers\\StatsController.cs",
+              "RelativeDocumentMoniker": "FireForce.Web\\Controllers\\StatsController.cs",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Controllers\\StatsController.cs",
+              "RelativeToolTip": "FireForce.Web\\Controllers\\StatsController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowJYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:18:58.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "FireForce.Web\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-26T06:54:08.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-26T06:54:02.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Equipment\\Index.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Equipment\\Index.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Equipment\\Index.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Equipment\\Index.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADQAAABJAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Analytics\\Index.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Analytics\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Analytics\\Index.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Analytics\\Index.cshtml",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAAKEAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-22T08:24:21.189Z",
+              "WhenOpened": "2025-12-26T02:45:09.212Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FireForce.Application",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Application\\FireForce.Application.csproj",
-              "RelativeDocumentMoniker": "FireForce.Application\\FireForce.Application.csproj",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Application\\FireForce.Application.csproj",
-              "RelativeToolTip": "FireForce.Application\\FireForce.Application.csproj",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-23T00:19:43.326Z",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Details.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Station\\Details.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Details.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Station\\Details.cshtml",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAQwNMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-26T00:57:31.277Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABQAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T02:50:59.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Edit.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Incident\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Edit.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Incident\\Edit.cshtml",
-              "ViewState": "AgIAACgAAAAAAAAAAAAAAHkAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-22T08:06:38.23Z",
+              "DocumentIndex": 6,
+              "Title": "AnalyticsController.cs",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Controllers\\AnalyticsController.cs",
+              "RelativeDocumentMoniker": "FireForce.Web\\Controllers\\AnalyticsController.cs",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Controllers\\AnalyticsController.cs",
+              "RelativeToolTip": "FireForce.Web\\Controllers\\AnalyticsController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T02:26:32.45Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Reports\\Index.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Reports\\Index.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Reports\\Index.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Reports\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T01:44:21.572Z",
+              "WhenOpened": "2025-12-26T02:25:45.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StationController.cs",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Controllers\\StationController.cs",
+              "RelativeDocumentMoniker": "FireForce.Web\\Controllers\\StationController.cs",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Controllers\\StationController.cs",
+              "RelativeToolTip": "FireForce.Web\\Controllers\\StationController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T00:46:39.809Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Delete.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Incident\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Delete.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Incident\\Delete.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwDEAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-22T08:20:04.15Z",
-              "EditorCaption": ""
+              "DocumentIndex": 9,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "FireForce.Web\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "FireForce.Web\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T01:36:17.747Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Firefighter\\Edit.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Firefighter\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Firefighter\\Edit.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Firefighter\\Edit.cshtml",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAG0AAAAaAAAAAAAAAA==",
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T01:28:50.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-26T01:22:07.523Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Equipment\\Delete.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Equipment\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Equipment\\Delete.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Equipment\\Delete.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Account\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Account\\ChangePassword.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Account\\ChangePassword.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Account\\ChangePassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T01:29:29.799Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Equipment\\Details.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Equipment\\Details.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Equipment\\Details.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Equipment\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIoAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T01:33:47.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-26T01:33:47.91Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "DatabaseSeeder.cs",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Infrastructure\\Data\\DatabaseSeeder.cs",
-              "RelativeDocumentMoniker": "FireForce.Infrastructure\\Data\\DatabaseSeeder.cs",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Infrastructure\\Data\\DatabaseSeeder.cs",
-              "RelativeToolTip": "FireForce.Infrastructure\\Data\\DatabaseSeeder.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAADwv0kAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T06:14:30.043Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Equipment\\Edit.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Equipment\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Equipment\\Edit.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Equipment\\Edit.cshtml",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAmwHQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T01:28:11.412Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "AccessDenied.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Account\\AccessDenied.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Account\\AccessDenied.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Account\\AccessDenied.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Account\\AccessDenied.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T05:42:09.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\AuditLog\\Index.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\AuditLog\\Index.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\AuditLog\\Index.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\AuditLog\\Index.cshtml",
-              "ViewState": "AgIAACgAAAAAAAAAAAAwwD8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T02:09:04.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Equipment\\Create.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Equipment\\Create.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Equipment\\Create.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Equipment\\Create.cshtml",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAcwHIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T00:21:17.061Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Create.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Incident\\Create.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Incident\\Create.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Incident\\Create.cshtml",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAwHsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-22T07:23:42.003Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
               "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Details.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Station\\Details.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Details.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Station\\Details.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAADwvy4AAAARAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Firefighter\\Details.cshtml",
+              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Firefighter\\Details.cshtml",
+              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Firefighter\\Details.cshtml",
+              "RelativeToolTip": "FireForce.Web\\Views\\Firefighter\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-22T05:55:14.591Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Edit.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Station\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Edit.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Station\\Edit.cshtml",
-              "ViewState": "AgIAADwAAAAAAAAAAAApwFQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-22T05:52:53.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Create.cshtml",
-              "RelativeDocumentMoniker": "FireForce.Web\\Views\\Station\\Create.cshtml",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Views\\Station\\Create.cshtml",
-              "RelativeToolTip": "FireForce.Web\\Views\\Station\\Create.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADQAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-22T05:30:44.987Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Program.cs",
-              "RelativeDocumentMoniker": "FireForce.Web\\Program.cs",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\Program.cs",
-              "RelativeToolTip": "FireForce.Web\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T00:53:52.573Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "FireForce.Web.csproj",
-              "DocumentMoniker": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\FireForce.Web.csproj",
-              "RelativeDocumentMoniker": "FireForce.Web\\FireForce.Web.csproj",
-              "ToolTip": "C:\\Users\\jpbacolod\\source\\repos\\FireForce\\FireForce.Web\\FireForce.Web.csproj",
-              "RelativeToolTip": "FireForce.Web\\FireForce.Web.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-22T00:51:56.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-26T00:47:58.352Z"
             }
           ]
         }
